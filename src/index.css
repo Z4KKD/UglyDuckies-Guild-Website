@@ -1,0 +1,304 @@
+:root {
+  --color-primary-bg: #1e2d31;    
+  --color-secondary: #D4AF37;         
+  --color-highlight: #FFD700;     
+  --color-text-light: #f0f0f0;
+  --color-text-muted: #e6e6e6;
+
+  --font-heading: 'Cinzel', serif; /* For titles */
+  --font-body: 'Caudex', serif;    /* For general text */
+  --border-radius: 12px;
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--color-primary-bg);
+  color: var(--color-text-light);
+  font-family: var(--font-body); 
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+}
+
+h1, h2, h3 {
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 0.06em;
+  user-select: none;
+  font-family: var(--font-heading); /* Apply heading font */
+}
+
+
+h1 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2.4rem; /* from 2.2rem */
+  margin-bottom: 1.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+
+p, ul {
+  font-size: 1.15rem; /* from 1.1rem */
+  line-height: 1.7;   /* add line height */
+  max-width: 720px;   /* slightly wider */
+  margin: 0 auto 1.8rem auto;
+  color: var(--color-text-muted);
+}
+
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+a {
+  color: var(--color-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition);
+  cursor: pointer;
+}
+
+a:hover, a:focus {
+  color: var(--color-highlight);
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--color-highlight);
+  color: var(--color-primary-bg);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition), box-shadow var(--transition);
+  display: block;
+  margin: 1rem auto;
+  box-shadow: 0 0 10px var(--color-highlight);
+  user-select: none;
+}
+
+button:hover, button:focus {
+  background-color: var(--color-secondary);
+  color: var(--color-primary-bg);
+  box-shadow: 0 0 20px var(--color-secondary);
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.main-container {
+  max-width: 993px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background:#1e2d31;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.main-container:hover {
+  box-shadow: 0 0 30px #c76300;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-highlight);
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    padding: 1.2rem 1rem; /* less padding on small */
+  }
+  
+  p, ul {
+    font-size: 1rem;
+    max-width: 100%; /* full width on small */
+  }
+  
+  .recruiters-list {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  
+  .recruiter-card {
+    min-width: unset;
+    width: 90%; /* full width with margin */
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  nav a {
+    margin: 0 0.8rem;
+    font-size: 1.1rem;
+  }
+    .header {
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1rem;
+  }
+}
+
+.recruiters-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.recruiter-card {
+  background-color: #2e1e00;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  padding: 1.2rem 1.5rem;
+  min-width: 220px;
+  max-width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.recruiter-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px #c76300;
+}
+
+.recruiter-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.recruiter-card p {
+  margin: 0.2rem 0;
+  color: #eee;
+}
+.main-banner {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main-logo {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 1rem auto;
+  display: block;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px #e2ae12;
+  transition: transform 0.3s ease;
+  background-color: #1e2d31;
+}
+
+.main-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #c76300;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  color: var(--color-highlight);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.fade-in {
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.copy-button {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--color-highlight);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.copy-button:hover {
+  transform: scale(1.2);
+  color: var(--color-secondary);
+}
+
+.screenshot-banner {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto 3rem auto;
+  display: block;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  transition: transform 0.3s ease;
+}
+
+
+.screenshot-banner:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px #c76300;
+}
+
+.nav {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.header {
+  padding: 1rem 1.2rem;
+}

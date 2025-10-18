@@ -3,6 +3,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import GuildCard from './components/GuildCard'
 import guilds from './data/guilds'
+import FlyingDucksBackground from './components/FlyingDucksBackground';
+import AnimatedBackground from './components/AnimatedBackground';
 import './index.css'
 
 const App = () => {
@@ -17,6 +19,8 @@ const App = () => {
 
   return (
     <div>
+      <AnimatedBackground />
+      <FlyingDucksBackground />
       <Header />
 
       <main className="main-container" tabIndex={-1}>

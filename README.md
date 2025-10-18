@@ -16,6 +16,9 @@ This project showcases the guild’s identity, recruitment details, and a fun an
 - ❤️ **Responsive Layout** – Fully mobile-friendly for all your raid recruitment needs.
 
 ---
+Live Demo: https://uglyduckies.netlify.app/
+
+![Screenshot](https://github.com/Z4KKD/UglyDuckies-Guild-Website/blob/main/public/SS.png)
 
 ## 🧩 Project Structure
 
